@@ -15,7 +15,7 @@ function App() {
                         <BookForm />
                     </div>
                     <div className="main-right">
-                        <Filter />
+                        {/* <Filter /> */}
                         <BookList />
                     </div>
                 </main>
