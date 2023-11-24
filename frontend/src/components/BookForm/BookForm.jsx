@@ -19,7 +19,7 @@ function BookForm() {
     return (
         <div className="book-form block">
             <h2>Add a New Book</h2>
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="title">Title: </label>
                     <input
