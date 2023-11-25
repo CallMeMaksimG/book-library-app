@@ -23,7 +23,7 @@ function BookForm() {
     };
 
     return (
-        <div className="book-form block">
+        <section className="book-form block">
             <h2 className="book-form__title title-2">Add a New Book</h2>
             <form className="form" onSubmit={handleSubmit}>
                 <div>
@@ -50,7 +50,7 @@ function BookForm() {
                 </div>
                 <button type="submit">Add Book</button>
             </form>
-        </div>
+        </section>
     );
 }
 
