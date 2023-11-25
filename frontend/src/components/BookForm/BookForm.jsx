@@ -22,21 +22,25 @@ function BookForm() {
             <form className="form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="title">Title: </label>
-                    <input
-                        type="text"
-                        id="title"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                    />
+                    <div className="book-form__input-wrapper input-wrapper">
+                        <input
+                            type="text"
+                            id="title"
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                        />
+                    </div>
                 </div>
                 <div>
                     <label htmlFor="author">Author: </label>
-                    <input
-                        type="text"
-                        id="author"
-                        value={author}
-                        onChange={(e) => setAuthor(e.target.value)}
-                    />
+                    <div className="book-form__input-wrapper input-wrapper">
+                        <input
+                            type="text"
+                            id="author"
+                            value={author}
+                            onChange={(e) => setAuthor(e.target.value)}
+                        />
+                    </div>
                 </div>
                 <button type="submit">Add Book</button>
             </form>
