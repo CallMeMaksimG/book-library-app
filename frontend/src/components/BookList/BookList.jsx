@@ -8,7 +8,6 @@ function BookList() {
     const dispatch = useDispatch();
 
     const handleDeleteBook = (id) => {
-        console.log(id);
         dispatch(deleteBook(id));
     };
     return (
@@ -17,14 +16,17 @@ function BookList() {
             {books.length === 0 ? (
                 <p>No books available</p>
             ) : (
-                <ul className='book-list__list'>
+                <ul className="book-list__list">
                     {books.map((book, index) => (
-                        <li className='book-list__list-item' key={book.id}>
+                        <li className="book-list__list-item" key={book.id}>
                             <div className="book-list__info">
                                 {++index}. {book.title} by{' '}
                                 <strong>{book.author}</strong>
                             </div>
-                            <button className='book-list__delete-btn' onClick={() => handleDeleteBook(book.id)}>
+                            <button
+                                className="book-list__delete-btn"
+                                onClick={() => handleDeleteBook(book.id)}
+                            >
                                 Delete
                             </button>
                         </li>

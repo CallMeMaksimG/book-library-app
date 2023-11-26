@@ -1,7 +1,16 @@
 .book-form {
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-
-  
 }
 
+.book-form__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+
+    @media(max-width: 1175px) {
+        justify-content: center;
+    }
+}
 
