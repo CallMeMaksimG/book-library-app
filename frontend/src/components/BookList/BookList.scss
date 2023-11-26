@@ -23,6 +23,10 @@
     position: relative;
 }
 
+.book-list__actions {
+    position: relative;
+}
+
 .book-list__delete-btn {
     position: absolute;
     top: 5px;
@@ -35,5 +39,20 @@
 
     &:hover {
         opacity: 0.5;
+    }
+}
+
+.star-icon {
+    position: absolute;
+    top: 8px;
+    right: 100px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    color: #fec260;
+
+    &:hover {
+        color: lighten(#fec260, 15%);
     }
 }

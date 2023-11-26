@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useSelector, UseSelector } from 'react-redux/es/hooks/useSelector';
-import { deleteBook } from '../../redux/books/actionCreators';
+import { BsBookmarkStarFill, BsBookmarkStar } from 'react-icons/bs';
+import { deleteBook, toggleFavorite } from '../../redux/books/actionCreators';
 import './BookList.scss';
 
 function BookList() {
@@ -9,6 +10,10 @@ function BookList() {
 
     const handleDeleteBook = (id) => {
         dispatch(deleteBook(id));
+    };
+
+    const handleToggleFavorite = (id) => {
+        dispatch(toggleFavorite(id));
     };
     return (
         <section className="book-list block">
@@ -22,13 +27,27 @@ function BookList() {
                             <div className="book-list__info">
                                 {++index}. {book.title} by{' '}
                                 <strong>{book.author}</strong>
+                            
+                            {/* <div className="book-list__actions"> */}
+                                <button
+                                    onClick={() =>
+                                        handleToggleFavorite(book.id)
+                                    }
+                                >
+                                    {book.isFavorite ? (
+                                        <BsBookmarkStarFill className="star-icon" />
+                                    ) : (
+                                        <BsBookmarkStar className="star-icon" />
+                                    )}
+                                </button>
+                                <button
+                                    className="book-list__delete-btn"
+                                    onClick={() => handleDeleteBook(book.id)}
+                                >
+                                    Delete
+                                </button>
+                            {/* </div> */}
                             </div>
-                            <button
-                                className="book-list__delete-btn"
-                                onClick={() => handleDeleteBook(book.id)}
-                            >
-                                Delete
-                            </button>
                         </li>
                     ))}
                 </ul>
