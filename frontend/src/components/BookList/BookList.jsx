@@ -27,8 +27,6 @@ function BookList() {
                             <div className="book-list__info">
                                 {++index}. {book.title} by{' '}
                                 <strong>{book.author}</strong>
-                            
-                            {/* <div className="book-list__actions"> */}
                                 <button
                                     onClick={() =>
                                         handleToggleFavorite(book.id)
@@ -46,7 +44,6 @@ function BookList() {
                                 >
                                     Delete
                                 </button>
-                            {/* </div> */}
                             </div>
                         </li>
                     ))}

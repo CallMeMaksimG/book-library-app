@@ -33,12 +33,14 @@
     right: 15px;
     padding: 5px 10px;
     height: 30px;
-    background-color: #eb455f;
+    background: #fff;
+    color: #eb455f;
     border-radius: 5px;
-    transition: opacity 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
-        opacity: 0.5;
+        background: #eb455f;
+        color: #fff;
     }
 }
 
