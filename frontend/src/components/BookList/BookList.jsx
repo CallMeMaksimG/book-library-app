@@ -34,6 +34,23 @@ function BookList() {
         const matchesFavorite = onlyFavoriteFilter ? book.isFavorite : true;
         return matchesTitle && matchesAuthor && matchesFavorite;
     });
+
+    const highlightMatch = (text, filter) => {
+        if (!filter) return text;
+
+        const regex = new RegExp(`(${filter})`, 'gi');
+
+        return text.split(regex).map((substring, index) => {
+            if (substring.toLowerCase() === filter.toLowerCase()) {
+                return (
+                    <span key={index} className="highlight">
+                        {substring}
+                    </span>
+                );
+            }
+            return substring;
+        });
+    };
     return (
         <section className="book-list block">
             <h2 className="title-2">Book List</h2>
@@ -44,8 +61,11 @@ function BookList() {
                     {filteredBooks.map((book, index) => (
                         <li className="book-list__list-item" key={book.id}>
                             <div className="book-list__info">
-                                {++index}. {book.title} by{' '}
-                                <strong>{book.author}</strong>
+                                {++index}.{' '}
+                                {highlightMatch(book.title, titleFilter)} by{' '}
+                                <strong>
+                                    {highlightMatch(book.author, authorFilter)}
+                                </strong>
                                 <button
                                     onClick={() =>
                                         handleToggleFavorite(book.id)
