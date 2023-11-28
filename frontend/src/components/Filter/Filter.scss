@@ -30,6 +30,12 @@
 
 .filter-group__input-wrapper {
     margin-top: 0;
-    width: 40%;
+    width: 30%;
     margin: 0 auto;
+}
+
+.filter-group__checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
