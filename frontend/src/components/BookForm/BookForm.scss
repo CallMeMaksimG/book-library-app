@@ -4,9 +4,9 @@
 
 .book-form__buttons-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px 45px;
     margin-top: 10px;
 
     @media(max-width: 1175px) {
