@@ -45,7 +45,7 @@ const booksSlice = createSlice({
     //         }
     //     },
     // },
-    // OPTIPN 2
+    // OPTION 2
     extraReducers: (builder) => {
         builder.addCase(fetchBook.fulfilled, (state, action) => {
             if (action.payload.title && action.payload.author) {
