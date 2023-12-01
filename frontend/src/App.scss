@@ -19,8 +19,7 @@
 .block {
     padding: 20px;
     margin: 20px;
-
-    width: 100%;
+    max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
 }
@@ -31,6 +30,10 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 40px;
+
+    @media (max-width: 990px) {
+        flex-direction: column;
+    }
 }
 
 .main-left {
@@ -39,6 +42,11 @@
     display: flex;
     align-items: center;
     align-self: flex-start;
+
+    @media (max-width: 990px) {
+        display: block;
+        align-self: auto;
+    }
 }
 
 .main-right {

@@ -51,18 +51,20 @@ function Filter() {
                         onChange={handleAuthorFilterChange}
                     />
                 </div>
-                <div className='filter-group__checkbox-wrapper'>
-                    <input
-                        checked={onlyFavoriteFilter}
-                        onChange={handleOnlyFavoriteFilterChange}
-                        type="checkbox"
-                        id="filter__favorite"
-                    ></input>
-                    <label htmlFor="filter__favorite">Only Favorite</label>
+                <div className="filter-group__button-wrapper">
+                    <div className='filter-group__checkbox-wrapper'>
+                        <input
+                            checked={onlyFavoriteFilter}
+                            onChange={handleOnlyFavoriteFilterChange}
+                            type="checkbox"
+                            id="filter__favorite"
+                        ></input>
+                        <label htmlFor="filter__favorite">Only Favorite</label>
+                    </div>
+                    <button type="button" onClick={handleResetFilters}>
+                        Reset filters
+                    </button>
                 </div>
-                <button type="button" onClick={handleResetFilters}>
-                    Reset filters
-                </button>
             </div>
         </div>
     );
