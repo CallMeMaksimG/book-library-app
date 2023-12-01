@@ -69,7 +69,10 @@ function BookList() {
                                 {highlightMatch(book.title, titleFilter)} by{' '}
                                 <strong>
                                     {highlightMatch(book.author, authorFilter)}
-                                </strong> ({book.source})
+                                </strong>{' '}
+                                ({book.source})
+                            </div>
+                            <div className="book-list__buttons">
                                 <button
                                     onClick={() =>
                                         handleToggleFavorite(book.id)

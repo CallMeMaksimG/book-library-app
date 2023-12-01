@@ -3,10 +3,12 @@
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 35px;
+    
 
     li:nth-child(odd) {
         background: #485563;
     }
+    
 }
 
 .book-list .highlight {
@@ -14,25 +16,31 @@
 }
 
 .book-list__info {
+    flex: 1;
+    text-align: left;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    text-align: start;
     &:hover {
         background: #adc4ce;
     }
 }
 
-.book-list__list-item {
-    position: relative;
+.book-list__buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 10px;
 }
 
-.book-list__actions {
-    position: relative;
+.book-list__list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
 }
 
 .book-list__delete-btn {
-    position: absolute;
     top: 5px;
     right: 15px;
     padding: 5px 10px;
@@ -49,7 +57,6 @@
 }
 
 .star-icon {
-    position: absolute;
     top: 8px;
     right: 100px;
     width: 24px;
