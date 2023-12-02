@@ -20,3 +20,5 @@
 - Axios;
 - БЭМ;
 - Адаптивная верстка.
+
+[Открыть проект](https://callmemaksimg.github.io/book-library-app/)
